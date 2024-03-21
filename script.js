@@ -17,7 +17,7 @@ const search = document.getElementById("search")
    });
 
    // Define the search function
-   function search() {
+function search() {
      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
      const searchResults = glosses.filter(gloss => {
        // Modify the condition based on your search requirements
@@ -26,8 +26,10 @@ const search = document.getElementById("search")
      displaySearchResults(searchResults);
    }
 
+
+
    // Function to display search results
-   function displaySearchResults(results) {
+function displaySearchResults(results) {
      const searchResultsDiv = document.getElementById('searchResults');
      searchResultsDiv.innerHTML = '';
      if (results.length === 0) {
