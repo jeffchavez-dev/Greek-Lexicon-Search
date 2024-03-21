@@ -28,7 +28,7 @@ function search() {
    }
 
 searchBtn.addEventListener('click', search)
-typeSearch.addEventListener('change', search)
+typeSearch.addEventListener('input', search)
 
    // Function to display search results
 function displaySearchResults(results) {
@@ -46,9 +46,14 @@ function displaySearchResults(results) {
    }
 
    // Optionally, you can trigger the search when the user presses Enter in the input field
-   document.getElementById('searchInput').addEventListener('keypress', function(event) {
+
+const recentSearch = []
+document.getElementById('searchInput').addEventListener('keypress', function(event) {
      if (event.key === 'Enter') {
        search();
+       const result = searchInput.value
+       recentSearch.push(result)
+       console.log(recentSearch)
      }
    });
  })
