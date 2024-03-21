@@ -1,4 +1,5 @@
 const searchBtn = document.getElementById("search")
+const typeSearch = document.getElementById("searchInput")
  
  
  // Load the CSV file using fetch
@@ -27,6 +28,7 @@ function search() {
    }
 
 searchBtn.addEventListener('click', search)
+searchBtn.addEventListener('keyup', search)
 
    // Function to display search results
 function displaySearchResults(results) {
