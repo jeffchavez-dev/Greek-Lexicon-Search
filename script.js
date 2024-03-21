@@ -54,7 +54,7 @@ document.getElementById('searchInput').addEventListener('keypress', function(eve
        search();
        const result = searchInput.value
        recentSearch.push(result)
-       recentSearch.
+       displayHistory.innerText = recentSearch
        console.log(recentSearch)
      }
    });
