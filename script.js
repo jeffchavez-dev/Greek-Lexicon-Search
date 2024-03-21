@@ -48,11 +48,13 @@ function displaySearchResults(results) {
    // Optionally, you can trigger the search when the user presses Enter in the input field
 
 const recentSearch = []
+const displayHistory = document.getElementById("history")
 document.getElementById('searchInput').addEventListener('keypress', function(event) {
      if (event.key === 'Enter') {
        search();
        const result = searchInput.value
        recentSearch.push(result)
+       recentSearch.
        console.log(recentSearch)
      }
    });
