@@ -26,7 +26,7 @@ function search() {
      displaySearchResults(searchResults);
    }
 
-
+search.addEventListener('click', search)
 
    // Function to display search results
 function displaySearchResults(results) {
