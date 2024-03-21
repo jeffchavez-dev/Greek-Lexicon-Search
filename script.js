@@ -1,3 +1,6 @@
+const search = document.getElementById("search")
+ 
+ 
  // Load the CSV file using fetch
  fetch('https://raw.githubusercontent.com/koine-gloss-database/koine_greek_glosses/master/glosses-en_US.csv')
  .then(response => response.text())
