@@ -28,7 +28,7 @@ function search() {
    }
 
 searchBtn.addEventListener('click', search)
-searchBtn.addEventListener('keyup', search)
+typeSearch.addEventListener('change', search)
 
    // Function to display search results
 function displaySearchResults(results) {
