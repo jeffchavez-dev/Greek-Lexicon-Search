@@ -57,7 +57,6 @@ const typeSearch = document.getElementById("searchInput")
         recentSearch.push(result)
         historyBox.innerText = recentSearch
         displayHistory.appendChild(historyBox)
-        displayHistory.innerText = recentSearch
         }
     });
     })
