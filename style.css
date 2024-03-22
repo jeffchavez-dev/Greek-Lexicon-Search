@@ -4,6 +4,8 @@
 
 body {
     text-align: center;
+    display: flex;
+    height: 100vh;
 }
 #searchInput {
 
