@@ -33,7 +33,13 @@ body {
     margin: 10px;
 }
 
+#history {
+    display: flex;
+    gap: .5em;
+}
+
 .box {
     border: 2px solid var(--font-color);
     padding: 10px;
+    display: block;
 }
