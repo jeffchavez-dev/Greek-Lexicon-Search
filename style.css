@@ -13,3 +13,8 @@ body {
 #searchInput {
     font-size: 2em;
 }
+
+#search {
+    font-size: 2em;
+    margin: 10px;
+}
