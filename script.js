@@ -52,6 +52,7 @@ const typeSearch = document.getElementById("searchInput")
     document.getElementById('searchInput').addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
         search();
+        const historyBox = document.createElement('div')
         const result = searchInput.value
         recentSearch.push(result)
         displayHistory.innerText = recentSearch
