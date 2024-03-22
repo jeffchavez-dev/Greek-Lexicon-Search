@@ -6,8 +6,10 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     height: 100vh;
 }
 #searchInput {
-
+    font-size: 2em;
 }
