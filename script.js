@@ -55,7 +55,6 @@ const typeSearch = document.getElementById("searchInput")
         const result = searchInput.value
         recentSearch.push(result)
         displayHistory.innerText = recentSearch
-        console.log(recentSearch)
         }
     });
     })
