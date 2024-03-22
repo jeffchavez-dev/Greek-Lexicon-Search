@@ -15,6 +15,7 @@ body {
 }
 
 #search {
+    cursor: pointer;
     font-size: 2em;
     margin: 10px;
 }
