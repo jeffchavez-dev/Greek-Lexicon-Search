@@ -34,5 +34,5 @@ body {
 }
 
 #searchResults {
-    
+    border: 2px solid var(--font-color)
 }
