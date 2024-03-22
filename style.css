@@ -33,6 +33,6 @@ body {
     margin: 10px;
 }
 
-#history {
+.box {
     border: 2px solid var(--font-color)
 }
