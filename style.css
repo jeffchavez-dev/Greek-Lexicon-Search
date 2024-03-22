@@ -17,6 +17,7 @@ body {
     height: 100vh;
 }
 #searchInput {
+    color: var(--font-color);
     font-size: 2em;
 }
 
