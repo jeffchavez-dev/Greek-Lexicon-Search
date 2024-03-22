@@ -1,6 +1,7 @@
 
 :root {
-
+    --main-color: #fff;
+    --font-color: #26cc10;
 }
 
 *, ::after, ::before {
@@ -20,6 +21,7 @@ body {
 }
 
 #search {
+    color: var(--font-color);
     cursor: pointer;
     font-size: 2em;
     margin: 10px;
