@@ -21,6 +21,10 @@ body {
     font-size: 2em;
 }
 
+::placeholder {
+    color: var(--font-color);
+}
+
 #search {
     color: var(--font-color);
     cursor: pointer;
