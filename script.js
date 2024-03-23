@@ -30,7 +30,7 @@ const typeSearch = document.getElementById("searchInput")
     searchBtn.addEventListener('click', search)
     typeSearch.addEventListener('input', search)
     const searchResultsDiv = document.getElementById('searchResults');
-    
+
     // Function to display search results
     function displaySearchResults(results) {
        
@@ -74,7 +74,8 @@ const typeSearch = document.getElementById("searchInput")
         clear.addEventListener('click', () => {
           recentSearch.splice(0, recentSearch.length);
           displayHistory.innerHTML = '';
-          searchResultsDiv.innerHTML = ''
+          searchResultsDiv.innerHTML = '';
+          result.innerText = '';
         })
         
         }
