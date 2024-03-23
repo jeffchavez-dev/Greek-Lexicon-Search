@@ -65,7 +65,15 @@ const typeSearch = document.getElementById("searchInput")
         historyBox.classList.add('box')
         historyBox.innerText = recentSearch
         displayHistory.appendChild(historyBox)
+
+
+        const clear = document.createElement('div')
+        clear.classList.add('box')
+        
         }
+
+
+
     });
     })
     .catch(error => console.error('Error fetching CSV:', error));
