@@ -39,6 +39,7 @@ body {
 
 ::placeholder {
     color: var(--font-bg);
+    font-size: .5em;
     opacity: .5;
 }
 
