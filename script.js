@@ -60,14 +60,15 @@ const typeSearch = document.getElementById("searchInput")
 
         if (!recentSearch.includes(result)) {
           recentSearch.push(result);
+          historyBox.classList.add('box')
+          historyBox.innerText = recentSearch
+          displayHistory.appendChild(historyBox)
           console.log(`recent search: ${recentSearch}`)
         } else {
           
         }
         // recentSearch.push(result)
-        historyBox.classList.add('box')
-        historyBox.innerText = recentSearch
-        displayHistory.appendChild(historyBox)
+       
 
 
         const clear = document.getElementById("clear-history")
