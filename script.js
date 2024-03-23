@@ -29,10 +29,11 @@ const typeSearch = document.getElementById("searchInput")
 
     searchBtn.addEventListener('click', search)
     typeSearch.addEventListener('input', search)
-
+    const searchResultsDiv = document.getElementById('searchResults');
+    
     // Function to display search results
     function displaySearchResults(results) {
-        const searchResultsDiv = document.getElementById('searchResults');
+       
         searchResultsDiv.innerHTML = '';
         if (results.length === 0) {
         searchResultsDiv.textContent = 'No results found.';
