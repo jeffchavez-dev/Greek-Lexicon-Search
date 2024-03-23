@@ -52,7 +52,7 @@ const typeSearch = document.getElementById("searchInput")
     const displayHistory = document.getElementById("history")
 
 
-    document.getElementById('searchInput').addEventListener('keypress', function(event) {
+    typeSearch.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
         search();
         const historyBox = document.createElement('div')
@@ -60,7 +60,7 @@ const typeSearch = document.getElementById("searchInput")
 
         if (!recentSearch.includes(result)) {
           recentSearch.push(result);
-          console.log(recentSearch)
+          console.log(`recent search ${recentSearch}`)
         } else {
           
         }
@@ -75,7 +75,7 @@ const typeSearch = document.getElementById("searchInput")
           recentSearch.splice(0, recentSearch.length);
           displayHistory.innerHTML = '';
           typeSearch.value = '';
-          console.log(`this is ${searchResultsDiv}`)
+          console.log(`this is ${typeSearch}`)
           result.innerText = '';
         })
         
