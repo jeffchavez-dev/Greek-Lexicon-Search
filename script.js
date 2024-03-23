@@ -74,7 +74,7 @@ const typeSearch = document.getElementById("searchInput")
         clear.addEventListener('click', () => {
           recentSearch.splice(0, recentSearch.length);
           displayHistory.innerHTML = '';
-          searchResultsDiv.innerHTML = '';
+          typeSearch.value = '';
           console.log(`this is ${searchResultsDiv}`)
           result.innerText = '';
         })
