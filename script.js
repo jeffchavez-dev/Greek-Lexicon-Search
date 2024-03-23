@@ -57,6 +57,7 @@ const typeSearch = document.getElementById("searchInput")
 
         if (!recentSearch.includes(result)) {
           recentSearch.push(result);
+          console.log(recentSearch)
         } else {
           recentSearch.push('');
         }
