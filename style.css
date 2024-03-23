@@ -33,7 +33,7 @@ body {
 }
 #searchInput {
     color: var(--font-color);
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 5px;
 }
 
