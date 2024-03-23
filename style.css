@@ -2,6 +2,7 @@
 :root {
     --main-color: #fff;
     --font-color: #26cc10;
+    --font-bg: #818a7f;
 }
 
 *, ::after, ::before {
@@ -37,7 +38,8 @@ body {
 }
 
 ::placeholder {
-    color: var(--font-color);
+    color: var(--font-bg);
+    opacity: .5;
 }
 
 #search, #clear-history {
