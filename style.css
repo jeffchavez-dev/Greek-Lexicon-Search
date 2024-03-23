@@ -17,6 +17,17 @@ body {
 
     height: 100vh;
 }
+
+.search-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main {
+    
+}
 #searchInput {
     color: var(--font-color);
     font-size: 2em;
