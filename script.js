@@ -67,7 +67,7 @@ const typeSearch = document.getElementById("searchInput")
         displayHistory.appendChild(historyBox)
 
 
-        const clear = document.createElement('div')
+        const clear = document.getElementById("clear-history")
         clear.classList.add('box')
         
         }
