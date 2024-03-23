@@ -78,6 +78,7 @@ const typeSearch = document.getElementById("searchInput")
           typeSearch.value = '';
           console.log(`this is ${typeSearch}`)
           result.innerText = '';
+          searchResultsDiv.innerHTML = ''
         })
         
         }
