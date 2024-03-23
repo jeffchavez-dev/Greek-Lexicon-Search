@@ -57,7 +57,9 @@ const typeSearch = document.getElementById("searchInput")
 
         if (!recentSearch.includes(result)) {
           recentSearch.push(result);
-        } 
+        } else {
+          recentSearch.push('');
+        }
         // recentSearch.push(result)
         historyBox.classList.add('box')
         historyBox.innerText = recentSearch
