@@ -59,7 +59,7 @@ const typeSearch = document.getElementById("searchInput")
           recentSearch.push(result);
           console.log(recentSearch)
         } else {
-          recentSearch.push('');
+          
         }
         // recentSearch.push(result)
         historyBox.classList.add('box')
