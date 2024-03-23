@@ -26,7 +26,7 @@ body {
     color: var(--font-color);
 }
 
-#search {
+#search, #clear {
     color: var(--font-color);
     cursor: pointer;
     font-size: 2em;
