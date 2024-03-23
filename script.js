@@ -75,6 +75,7 @@ const typeSearch = document.getElementById("searchInput")
           recentSearch.splice(0, recentSearch.length);
           displayHistory.innerHTML = '';
           searchResultsDiv.innerHTML = '';
+          console.log(`this is ${searchResultsDiv}`)
           result.innerText = '';
         })
         
