@@ -49,6 +49,8 @@ const typeSearch = document.getElementById("searchInput")
 
     const recentSearch = []
     const displayHistory = document.getElementById("history")
+
+    
     document.getElementById('searchInput').addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
         search();
@@ -68,7 +70,9 @@ const typeSearch = document.getElementById("searchInput")
 
 
         const clear = document.getElementById("clear-history")
-        clear.classList.add('box')
+        clear.addEventListener('click', () => {
+          recentSearch.splice(0, recentSearch.length)
+        })
         
         }
 
