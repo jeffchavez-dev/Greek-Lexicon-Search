@@ -59,7 +59,7 @@ const typeSearch = document.getElementById("searchInput")
         const result = searchInput.value
 
         if (!recentSearch.includes(result)) {
-          recentSearch.push(result);
+          recentSearch.unshift(result);
           historyBox.classList.add('box')
           
           if (recentSearch.length > 1) {
@@ -71,7 +71,6 @@ const typeSearch = document.getElementById("searchInput")
             historyBox.innerText = recentSearch
             displayHistory.appendChild(historyBox)
             console.log(`recent search: ${recentSearch}`)
-
           }
 
           
