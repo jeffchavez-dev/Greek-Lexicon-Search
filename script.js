@@ -3,7 +3,7 @@ const typeSearch = document.getElementById("searchInput")
  
  
  // Load the CSV file using fetch
- const fetchData() {
+ const fetchData = () => {
 
 
   fetch('https://raw.githubusercontent.com/koine-gloss-database/koine_greek_glosses/master/glosses-en_US.csv')
@@ -99,3 +99,12 @@ const typeSearch = document.getElementById("searchInput")
       })
       .catch(error => console.error('Error fetching CSV:', error));
  }
+
+
+ typeSearch.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+  fetchData;
+
+  }
+
+})
