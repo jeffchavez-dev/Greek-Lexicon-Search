@@ -35,12 +35,14 @@ body {
     color: var(--font-color);
     font-size: 1.8em;
     margin: 5px;
+    width: 50%;
 }
 
 ::placeholder {
     color: var(--font-bg);
     font-size: .5em;
     opacity: .5;
+    
 }
 
 #search, #clear-history {
