@@ -65,12 +65,10 @@ const typeSearch = document.getElementById("searchInput")
           if (recentSearch.length > 1) {
             recentSearch.splice(1, recentSearch.length)
             historyBox.innerText = recentSearch
-            displayHistory.appendChild(historyBox)
-            console.log(`recent search removed: ${recentSearch}`)
+            displayHistory.appendChild(historyBox)    
           } else {
             historyBox.innerText = recentSearch
             displayHistory.appendChild(historyBox)
-            console.log(`recent search: ${recentSearch}`)
           }
 
          
