@@ -71,6 +71,12 @@ const typeSearch = document.getElementById("searchInput")
             displayHistory.appendChild(historyBox)
           }
 
+          historyBox.addEventListener('click', () => {
+            
+          })
+        }
+
+        
          
         // recentSearch.push(result)
        
