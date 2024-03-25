@@ -29,7 +29,6 @@ const typeSearch = document.getElementById("searchInput")
 
     searchBtn.addEventListener('click', search)
     typeSearch.addEventListener('input', search)
-    
     const searchResultsDiv = document.getElementById('searchResults');
 
     // Function to display search results
@@ -53,7 +52,7 @@ const typeSearch = document.getElementById("searchInput")
     const displayHistory = document.getElementById("history")
 
 
-    typeSearch.addEventListener('click', function(event) {
+    typeSearch.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
         search();
         const historyBox = document.createElement('div')
