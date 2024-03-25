@@ -72,15 +72,9 @@ const typeSearch = document.getElementById("searchInput")
           }
 
           historyBox.addEventListener('click', () => {
-            
+
           })
         }
-
-        
-         
-        // recentSearch.push(result)
-       
-
 
         const clear = document.getElementById("clear-history")
         clear.addEventListener('click', () => {
