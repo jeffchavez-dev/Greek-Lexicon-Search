@@ -73,12 +73,7 @@ const typeSearch = document.getElementById("searchInput")
             console.log(`recent search: ${recentSearch}`)
           }
 
-          
-        } else {
-          
-        }
-
-       
+         
         // recentSearch.push(result)
        
 
