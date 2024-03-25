@@ -72,7 +72,6 @@ const typeSearch = document.getElementById("searchInput")
           }
 
           historyBox.addEventListener('click', () => {
-              alert(historyBox.innerText)
               searchInput.value = historyBox.innerText
               search()
           })
