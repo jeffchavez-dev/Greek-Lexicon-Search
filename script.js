@@ -103,7 +103,7 @@ const typeSearch = document.getElementById("searchInput")
 
  typeSearch.addEventListener('keypress', function(event) {
   if (event.key === 'Enter') {
-  fetchData;
+  fetchData();
 
   }
 
