@@ -56,8 +56,8 @@ const typeSearch = document.getElementById("searchInput")
       const displayHistory = document.getElementById("history")
 
 
-      typeSearch.addEventListener('keypress', function(event) {
-          if (event.key === 'Enter') {
+      // typeSearch.addEventListener('keypress', function(event) {
+      //     if (event.key === 'Enter') {
           search();
           const historyBox = document.createElement('div')
           const result = searchInput.value
@@ -89,9 +89,9 @@ const typeSearch = document.getElementById("searchInput")
             console.log(`this is ${typeSearch}`)
             result.innerText = '';
             searchResultsDiv.innerHTML = ''
-          })
+          // })
           
-          }
+          // }
 
 
 
