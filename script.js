@@ -13,6 +13,7 @@ const typeSearch = document.getElementById("searchInput")
     const lines = data.trim().split('\n');
     console.log(lines)
     const headers = lines.shift().split(',');
+    console.log(`headers: ${headers}`)
     const glosses = lines.map(line => {
       const values = line.split(',');
       return headers.reduce((obj, header, index) => {
