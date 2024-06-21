@@ -1,6 +1,6 @@
 const searchBtn = document.getElementById("search");
 const typeSearch = document.getElementById("searchInput");
-const searchResultsDiv = document.getElementById('searchResults');
+const searchResultsDiv = document.getElementById('search-results');
 const displayHistory = document.getElementById("history");
 const clear = document.getElementById("clear-history");
 const recentSearch = [];
