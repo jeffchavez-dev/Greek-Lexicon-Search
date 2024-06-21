@@ -11,7 +11,7 @@ const typeSearch = document.getElementById("searchInput")
   .then(data => {
     // Parse the CSV data into an array of objects
     const lines = data.trim().split('\n');
-    console.log(lines)
+    console.log(`these are lines: ${lines}`)
     const headers = lines.shift().split(',');
     console.log(`headers: ${headers}`)
     const glosses = lines.map(line => {
@@ -33,7 +33,7 @@ const typeSearch = document.getElementById("searchInput")
           displaySearchResults(searchResults);
       }
 
-      searchBtn.addEventListener('click', search)
+      // searchBtn.addEventListener('click', search)
       typeSearch.addEventListener('input', search)
       const searchResultsDiv = document.getElementById('searchResults');
 
