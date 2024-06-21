@@ -1,6 +1,6 @@
 const searchBtn = document.getElementById("search");
 const typeSearch = document.getElementById("searchInput");
-const searchResultsDiv = document.getElementById('search-results');
+const searchResultsDiv = document.getElementById('searchResults');
 const displayHistory = document.getElementById("history");
 const clear = document.getElementById("clear-history");
 const recentSearch = [];
@@ -23,7 +23,7 @@ const parseCSV = (data) => {
     return lines.map(line => {
         const values = line.split(',');
         return headers.reduce((obj, header, index) => {
-            obj[header] = values[index];
+            obj[header] = values[index] ? values[index].trim() : '';
             return obj;
         }, {});
     });
@@ -63,27 +63,28 @@ const displaySearchResults = (results) => {
             resultDiv.classList.add('result');
 
             const wordDiv = document.createElement('div');
-            wordDiv.textContent = `Word: ${result.Word}`;
+            wordDiv.textContent = `Word: ${result.Word || 'N/A'}`;
             resultDiv.appendChild(wordDiv);
 
             const altSpellingsDiv = document.createElement('div');
-            altSpellingsDiv.textContent = `Alternate Spellings: ${result['alternate-spellings']}`;
+            altSpellingsDiv.textContent = `Alternate Spellings: ${result['alternate-spellings'] || 'N/A'}`;
             resultDiv.appendChild(altSpellingsDiv);
 
             const transliterationDiv = document.createElement('div');
-            transliterationDiv.textContent = `Transliteration: ${result.transliteration}`;
+            transliterationDiv.textContent = `Transliteration: ${result.transliteration || 'N/A'}`;
             resultDiv.appendChild(transliterationDiv);
 
             const glossDiv = document.createElement('div');
-            glossDiv.textContent = `Gloss: ${result.Gloss}`;
+            glossDiv.textContent = `Gloss: ${result.Gloss || 'N/A'}`;
             resultDiv.appendChild(glossDiv);
 
             const strongsDiv = document.createElement('div');
-            strongsDiv.textContent = `Strongs: ${result.Strongs}`;
+            strongsDiv.textContent = `Strongs: ${result.Strongs || 'N/A'}`;
             resultDiv.appendChild(strongsDiv);
 
             const frequencyDiv = document.createElement('div');
-            frequencyDiv.textContent = `Frequency: ${result.frequency}`;
+            const frequency = parseInt(result.frequency, 10);
+            frequencyDiv.textContent = `Frequency: ${isNaN(frequency) ? 'N/A' : frequency}`;
             resultDiv.appendChild(frequencyDiv);
 
             searchResultsDiv.appendChild(resultDiv);
