@@ -66,6 +66,8 @@ body {
 }
 
 .result {
+    text-align: center;
+    width: 220px;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 5px 0;
