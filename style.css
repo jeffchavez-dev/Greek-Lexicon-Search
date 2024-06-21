@@ -1,4 +1,3 @@
-
 :root {
     --main-color: #fff;
     --font-color: #26cc10;
@@ -10,11 +9,6 @@
 }
 
 body {
-    /* text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row; */
     height: 100vh;
 }
 
@@ -24,7 +18,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 80%;
-    margin:auto;
+    margin: auto;
 }
 
 .main {
@@ -32,6 +26,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #searchInput {
     color: var(--font-color);
     font-size: 1.8em;
@@ -43,7 +38,6 @@ body {
     color: var(--font-bg);
     font-size: .5em;
     opacity: .5;
-    
 }
 
 #search, #clear-history {
@@ -64,4 +58,15 @@ body {
     padding: 10px;
     display: block;
     cursor: pointer;
+}
+
+.result {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.result div {
+    margin-bottom: 5px;
 }
