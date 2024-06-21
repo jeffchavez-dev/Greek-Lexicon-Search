@@ -40,6 +40,11 @@ body {
     opacity: .5;
 }
 
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
 #search, #clear-history {
     color: var(--font-color);
     cursor: pointer;
