@@ -60,7 +60,32 @@ const displaySearchResults = (results) => {
     } else {
         results.forEach(result => {
             const resultDiv = document.createElement('div');
-            resultDiv.textContent = JSON.stringify(result);
+            resultDiv.classList.add('result');
+
+            const wordDiv = document.createElement('div');
+            wordDiv.textContent = `Word: ${result.Word}`;
+            resultDiv.appendChild(wordDiv);
+
+            const altSpellingsDiv = document.createElement('div');
+            altSpellingsDiv.textContent = `Alternate Spellings: ${result['alternate-spellings']}`;
+            resultDiv.appendChild(altSpellingsDiv);
+
+            const transliterationDiv = document.createElement('div');
+            transliterationDiv.textContent = `Transliteration: ${result.transliteration}`;
+            resultDiv.appendChild(transliterationDiv);
+
+            const glossDiv = document.createElement('div');
+            glossDiv.textContent = `Gloss: ${result.Gloss}`;
+            resultDiv.appendChild(glossDiv);
+
+            const strongsDiv = document.createElement('div');
+            strongsDiv.textContent = `Strongs: ${result.Strongs}`;
+            resultDiv.appendChild(strongsDiv);
+
+            const frequencyDiv = document.createElement('div');
+            frequencyDiv.textContent = `Frequency: ${result.frequency}`;
+            resultDiv.appendChild(frequencyDiv);
+
             searchResultsDiv.appendChild(resultDiv);
         });
     }
