@@ -19,14 +19,33 @@ const fetchData = async () => {
 // Parse the CSV data into an array of objects
 const parseCSV = (data) => {
     const lines = data.trim().split('\n');
-    const headers = lines.shift().split(',');
+    const headers = lines.shift().split(',').map(header => header.trim());
     return lines.map(line => {
-        const values = line.split(',');
+        const values = parseLine(line);
         return headers.reduce((obj, header, index) => {
             obj[header] = values[index] ? values[index].trim() : '';
             return obj;
         }, {});
     });
+};
+
+// Function to parse a CSV line, handling commas within quotes
+const parseLine = (line) => {
+    const values = [];
+    let inQuotes = false;
+    let value = '';
+    for (let char of line) {
+        if (char === '"') {
+            inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+            values.push(value);
+            value = '';
+        } else {
+            value += char;
+        }
+    }
+    values.push(value);
+    return values;
 };
 
 // Throttle function to limit the rate of function execution
@@ -62,17 +81,10 @@ const displaySearchResults = (results) => {
             const resultDiv = document.createElement('div');
             resultDiv.classList.add('result');
 
+            const word = `${result.Word}${result['alternate-spellings'] ? ', ' + result['alternate-spellings'] : ''}${result.transliteration ? ', ' + result.transliteration : ''}`;
             const wordDiv = document.createElement('div');
-            wordDiv.textContent = `Word: ${result.Word || 'N/A'}`;
+            wordDiv.textContent = `Word: ${word}`;
             resultDiv.appendChild(wordDiv);
-
-            const altSpellingsDiv = document.createElement('div');
-            altSpellingsDiv.textContent = `Alternate Spellings: ${result['alternate-spellings'] || 'N/A'}`;
-            resultDiv.appendChild(altSpellingsDiv);
-
-            const transliterationDiv = document.createElement('div');
-            transliterationDiv.textContent = `Transliteration: ${result.transliteration || 'N/A'}`;
-            resultDiv.appendChild(transliterationDiv);
 
             const glossDiv = document.createElement('div');
             glossDiv.textContent = `Gloss: ${result.Gloss || 'N/A'}`;
